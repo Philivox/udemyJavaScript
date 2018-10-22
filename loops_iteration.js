@@ -46,10 +46,41 @@ const cars = ['Ford', 'Chevy', 'Honda', 'Toyota'];
 //     console.log('Car: ' + cars[i]);
 // }
 
-//ForEach Loops
+//--FOREACH LOOPS--
 
-cars.forEach(function(car){
-    //"car" is the iterator, usually "cur" for "current" is used, but using the singular name of the array is fine
-    console.log('Car: ' + car)
-});
+// cars.forEach(function(car, index, array){
+//     console.log(`${index} : ${car}`);
+//     console.log(`${array}`);
+// });
 //Make sure encapsulation goes to the ened since your function is what prints things out and it's in the parameter of the forEach loop
+
+//--FOR IN LOOP--
+
+// const user = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     age: 40
+// }
+// //Starts off like a regular for loop
+// for(let x in user){
+//     //x represents the keys (firstName, lastName, age) and then using the user with x you'll get the value with key-value pairs
+//     console.log(`${x} : ${user[x]}`);
+//     //You can think of it as, "show me x : the object of x"
+// }
+
+
+//Map Method
+
+// Create an array of objects of users
+const users = [
+    {id: 1, name: 'Andy'},
+    {id: 2, name: 'Stephanie'},
+    {id: 3, name: 'Beemo'}
+];
+
+//Map method takes in a function just like foreach
+const ids = users.map(function(user){
+    return user.name;
+});
+
+console.log(ids);
