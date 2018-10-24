@@ -120,4 +120,53 @@ val = list;
 //Getting child nodes of unordered list
 val = list.childNodes;
 //What you get in the console is a list of the child nodes 
+val = list.childNodes[0].nodeType;
+//This will return a number "3" in the console
+//1 - Element
+//2 - Attribute (deprecated)
+//3 - Text node
+//8 - Comment
+//9 - Document itself
+//10 - Doctype
+
+
+//Get children element nodes
+val = list.children;
+val = list.children[0];
+list.children[1].textContent = "I'm a child!";
+//Children of children
+list.children[3].children;
+list.children[3].children[0].id = 'test-link';
+val = list.children[3].children[0];
+//In the actual web page, this element is an "x" to delete a task, you can use JS to select it specifically and change the id 
+
+val = list.firstChild;
+//Returns #text since that's what the first node type is, but if you don't want to deal with the text nodes:
+val = list.firstElementChild;
+//In most cases you'll use this
+val = list.lastChild;
+val = list.lastElementChild;
+//lastElementChild will give you the very last list element
+
+//Count Child Elements
+val = list.childElementCount;
+//You'll get "5" since there are 5 children of the ul
+
+//Get Parent Node
+val = listItem.parentNode;
+//There's also parentElement just like parentNode, most of the time they're the same
+val = listItem.parentElement.parentElement;
+//Returns div with "card-action" which is the class of the div above the node's node
+
+//Get Next Sibling
+val = listItem.nextSibling;
+//Returns #text just like with child nodes this deals with other types of nodes not just elements
+val = listItem.nextElementSibling;
+val = listItem.nextElementSibling;
+val = listItem.previousSibling;
+val = listItem.previousElementSibling;
+//You can continuously append "nextSibling" or "previousSibling" to the end to traverse up and down a DOM
+
+
+
 console.log(val);
