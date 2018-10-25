@@ -1,8 +1,8 @@
-document.querySelector('.clear-tasks').addEventListener('click', function(e){
-    console.log('Hello World!');
-    e.preventDefault();
-    //Prevent default can also stop the behavior from automatically refreshing the page
-});
+// document.querySelector('.clear-tasks').addEventListener('click', function(e){
+//     console.log('Hello World!');
+//     e.preventDefault();
+//     //Prevent default can also stop the behavior from automatically refreshing the page
+// });
 //This will have the clear tasks button say "Hello World!" in the console but will immediately refresh the page because the href attribute is blank, putting a # inside will stop it from doing so
 
 document.querySelector('.clear-tasks').addEventListener('click', onClick);
@@ -25,13 +25,13 @@ function onClick(e){
     val = e.type;
 
     //Timestamp
-    val = e.timeStamp;
+    // val = e.timeStamp;
 
-    //Coords event relative to the window
-    val = e.clientY;
-    val = e.clientX;
+    // //Coords event relative to the window
+    // val = e.clientY;
+    // val = e.clientX;
 
-    val = e.offsetY;
-    val = e.offsetX;
+    // val = e.offsetY;
+    // val = e.offsetX;
     console.log(val);
 }
